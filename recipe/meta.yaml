@@ -1,5 +1,5 @@
 {% set name = "hpgeom" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 282ddaf688a1516bf0310a0748dd66b26e3f9a8f55b5e08e7fdd31f3b4e5bf3d
+  sha256: a533d424ea5279b6fb9cd30810ad5bbbbbd3fc6e729d58dbe3947df3203fdb2a
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
