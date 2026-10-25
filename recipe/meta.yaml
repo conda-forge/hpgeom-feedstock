@@ -1,5 +1,5 @@
 {% set name = "hpgeom" %}
-{% set version = "1.5.4" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 85ac73e267c11f3f248920d3541a0e6ffab821cae54f0d44414d1939dfb91200
+  sha256: fd926f43046c62d6a1f856bfaafe0d50d6e1e91e0183817d28d495d471742c8f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -29,6 +29,7 @@ requirements:
     - numpy
   run:
     - python
+    - numpy
     - importlib-metadata
 
 test:
